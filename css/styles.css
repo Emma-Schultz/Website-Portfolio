@@ -488,7 +488,7 @@ main section:nth-of-type(even) {
     width: 16px;
     height: 13px;
     background: currentColor;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(109, 68, 235, 0.3);
     border-radius: 50% 50% 45% 45% / 60% 60% 40% 40%;
     opacity: 0;
     filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35));

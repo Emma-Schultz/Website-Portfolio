@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header class="hero">
+            <h1><span class="site-title">Emma Schultz</span></h1>
+    </header>
+
+    <nav class="desktopMenu">
+        <div class="box">
+            <a href="#" class="nav-logo-link">
+                <img class="logo" src="images/logo.png" alt="logo">
+            </a>
+            <ul>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#skills">SKILLS</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#education">EDUCATION</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="mobileMenu">
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <div class="mobile-bar">
+            <a href="#" class="mobile-logo-link">
+                <img src="images/logo.png" alt="Logo" class="mobile-logo">
+            </a>
+            <label for="menu-toggle" class="hamburger" aria-label="Toggle Menu">&#9776;</label>
+        </div>
+        <ul class="mobile-links">
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#skills">SKILLS</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#education">EDUCATION</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="intro-cta">
+            <h2>Welcome to my website!</h2>
+            <a href="#contact" class="cta-button">GET IN CONTACT!</a>
+        </section>
+
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <p>Hello! My name is Emma. I'm a prospective programmer and website design student working towards a comprehensive education to be able to contribute to real projects. I enjoy creating clean, working programs and troubleshooting issues that arise along the way.</p>
+            <p>This website is a space for me to share what I've accomplished and reach out for people to contact me if they like my work!</p>
+        </section>
+        
+        <section id="skills" class="skills">
+            <h2>Skills</h2>
+            <p>Some of my skills include:</p>
+            <ul class="skills-list">
+                <li><img src="images/HTML_CSS.png" alt=""> HTML &amp; CSS</li>
+                <li><img src="images/Python.png" alt=""> Python</li>
+                <li><img src="images/GitBash.png" alt=""> SQlite &amp; GitBash</li>
+                <li><img src="images/Security.png" alt=""> Windows Security</li>
+                <li><img src="images/Setup.png" alt=""> Windows Setup</li>
+                <li><img src="images/VSCode.png" alt=""> VSCode</li>
+            </ul>
+        </section>
+
+        <section id="projects" class="projects">
+            <h2>Projects</h2>
+            <div class="css-carousel">
+                <input type="radio" name="project-slide" id="slide-1" class="slide-radio" checked>
+                <input type="radio" name="project-slide" id="slide-2" class="slide-radio">
+                <input type="radio" name="project-slide" id="slide-3" class="slide-radio">
+
+                <div class="project-scroller">
+                    <article class="project-slide" id="project-1">
+                        <img src="images/Simple_RPG.png" alt="Project 1">
+                        <h3 class="project-title">Project 1</h3>
+                        <p class="project-desc">A simple RPG map with a character you can move and an item you can obtain.</p>
+                    </article>
+                    <article class="project-slide" id="project-2">
+                        <img src="images/Auto_Insurance.png" alt="Project 2">
+                        <h3 class="project-title">Project 2</h3>
+                        <p class="project-desc">Calculates cost of auto insurance based on age, gender, and cost of car.</p>
+                    </article>
+                    <article class="project-slide" id="project-3">
+                        <img src="images/Rock_Paper_Scissors.png" alt="Project 3">
+                        <h3 class="project-title">Project 3</h3>
+                        <p class="project-desc">Rock, paper, scissors against the computer!</p>
+                    </article>
+                </div>
+
+                <div class="carousel-nav" aria-label="Project slides navigation">
+                    <label for="slide-3" class="nav-arrow prev-1" aria-label="Previous project">&larr;</label>
+                    <label for="slide-1" class="nav-arrow prev-2" aria-label="Previous project">&larr;</label>
+                    <label for="slide-2" class="nav-arrow prev-3" aria-label="Previous project">&larr;</label>
+                    <div class="carousel-dots">
+                        <label for="slide-1" class="dot dot-1" aria-label="Go to Project 1"></label>
+                        <label for="slide-2" class="dot dot-2" aria-label="Go to Project 2"></label>
+                        <label for="slide-3" class="dot dot-3" aria-label="Go to Project 3"></label>
+                    </div>
+                    <label for="slide-2" class="nav-arrow next-arrow next-1" aria-label="Next project">&rarr;</label>
+                    <label for="slide-3" class="nav-arrow next-arrow next-2" aria-label="Next project">&rarr;</label>
+                    <label for="slide-1" class="nav-arrow next-arrow next-3" aria-label="Next project">&rarr;</label>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="education">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>Nova Scotia Community College (NSCC)</h3>
+                <p>Web Development Program ~ Currently Enrolled</p>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact</h2>
+            <p>Want to work on a project?</p>
+            <a href="mailto:emmals896912@outlook.com" class="cta-button">Contact ME</a>
+        </section>
+
+        <footer class="site-footer">
+            <div class="footer-top">
+                <h2>Emma Schultz</h2>
+                <p class="footer-role">IT &amp; Web Programming Student</p>
+                <p class="footer-tagline">Building fresh projects along the way!</p>
+                <div class="footer-links">
+                    <a href="emmals896912@outlook.com">Email me!</a>
+                </div>
+                <a href="#" class="back-to-top">&uarr; Back to Top</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Emma Schultz. All rights reserved.</p>
+                <p>Designed and developed by Emma Schultz</p>
+            </div>
+        </footer>
+
+        </html>
+</body>

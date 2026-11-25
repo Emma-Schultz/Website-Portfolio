@@ -461,3 +461,145 @@ main section:nth-of-type(even) {
         display: block;
     }
 }
+
+
+/* --- PAW PRINT EASTER EGG --- */
+
+
+.paw-toggle {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.paw-trigger {
+    cursor: pointer;
+    display: inline-block;
+    user-select: none;
+    transition: transform 0.2s ease;
+}
+
+.paw-trigger:hover {
+    transform: scale(1.03);
+}
+
+.paw-stage {
+    position: fixed;
+    width: 16px;
+    height: 13px;
+    background: currentColor;
+    color: rgba(255, 255, 255, 0.9);
+    border-radius: 50% 50% 45% 45% / 60% 60% 40% 40%;
+    opacity: 0;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35));
+}
+
+.paw-print::before,
+.paw-print::after {
+    content: "";
+    position: absolute;
+    top: -8px;
+    width: 6px;
+    height: 8px;
+    background: currentColor;
+    border-radius: 50%;
+}
+
+.paw-print::before {
+    left: -2px;
+    transform: rotate(18deg);
+}
+
+.paw-print::after {
+    right: -2px;
+    transform: rotate(18deg);
+}
+
+.paw-print.p1,
+.paw-print.p2,
+.paw-print.p3,
+.paw-print.p4 {
+    box-shadow: 
+    3px -10px 0 -1px currentColor,
+    10px -10px 0 -1px currentColor;
+}
+
+.p1 {animation-delay: 0s; }
+.p2 {animation-delay: 0.22s;}
+.p3 {animation-delay: 0.44s; }
+.p4 {animation-delay: 0.66s;}
+
+.paw-toggle:checked ~ .paw-stage .trail-1 {
+    animation: pawAcrossRight 2.2s ease-in-out forwards;
+}
+
+.paw-toggle:checked ~ .paw-stage .trail-2 {
+    animation: pawAcrossLeftUp 2.4s ease-in-out forwards;
+}
+
+.paw-toggle:checked ~ .paw-stage .trail-3 {
+    animation: pawDiagonalDown 2.5s ease-in-out forwards;
+}
+
+@keyframes pawAcrossRight {
+    0% {
+        left: -40px;
+        top: 28%;
+        opacity: 0;
+        transform: rotate(90deg) scale(0.8);
+    }
+    15% {
+        opacity: 0.95;
+    }
+    85% {
+        opacity: 0.95;
+    }
+    100% {
+        left: calc(100vw + 40px);
+        top: 34%;
+        opacity: 0;
+        transform: rotate(90deg) scale(1);
+    }
+}
+
+@keyframes pawAcrossLeftUp {
+    0% {
+        left: calc(100vw + 40px);
+        top: 28%;
+        opacity: 0;
+        transform: rotate(-90deg) scale(0.85);
+    }
+    15% {
+        opacity: 0.9;
+    }
+    85% {
+        opacity: 0.9;
+    }
+    100% {
+        left: -40px;
+        top: 48%;
+        opacity: 0;
+        transform: rotate(-90deg) scale(1);
+    }
+}
+
+@keyframes pawDiagonalDown {
+    0% {
+        left: 12%;
+        top: -40px;
+        opacity: 0;
+        transform: rotate(135deg) scale(0.8);
+    }
+    15% {
+        opacity: 0.9;
+    }
+    85% {
+        opacity: 0.9;
+    }
+    100% {
+        left: 82%;
+        top: calc(100vh + 40px);
+        opacity: 0;
+        transform: rotate(135deg) scale(1);
+    }
+}
